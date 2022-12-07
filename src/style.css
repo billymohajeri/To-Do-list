@@ -36,7 +36,7 @@ li {
   border: none;
   font-style: italic;
   margin-bottom: 0.7em;
-  width: 100%;
+  width: 75%;
 }
 
 ::placeholder {
@@ -62,4 +62,18 @@ li {
   text-decoration: underline;
   color: #fff;
   cursor: pointer;
+}
+
+i {
+  cursor: pointer;
+  float: right;
+  color: rgb(133, 133, 133);
+}
+
+.fa-arrow-turn-down {
+  transform: rotate(90deg);
+}
+
+.fa-trash-can {
+  margin-top: 1em;
 }
