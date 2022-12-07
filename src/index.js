@@ -1,7 +1,10 @@
 import './style.css';
-import { addToArr, removeFromArr, updateArr } from './crud.js';
+import {
+  addToArr, removeFromArr, saveToLocal, updateArr,
+} from './crud.js';
 
-const tasksArr = [];
+let tasksArr = JSON.parse(localStorage.getItem('myList'));
+
 let del = document.createElement('i');
 let edt = document.createElement('i');
 let sav = document.createElement('i');
@@ -133,4 +136,11 @@ document.addEventListener('click', (e) => {
   if (e.target.className === 'fa-regular fa-floppy-disk fa-xs') {
     saveFunc(e);
   }
+});
+
+const clearList = document.querySelector('.clear');
+clearList.addEventListener('click', () => {
+  tasksArr = [];
+  saveToLocal(tasksArr);
+  generateList();
 });
