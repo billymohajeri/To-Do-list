@@ -1,5 +1,5 @@
 import './style.css';
-import { add } from './crud.js';
+import { addToArr, removeFromArr } from './crud.js';
 
 const tasksArr = [];
 let img = document.createElement('i');
@@ -16,7 +16,6 @@ const generateList = () => {
     const check = document.createElement('input');
     const lbl = document.createElement('label');
     img = document.createElement('i');
-    // const img = document.createElement("i");
     check.type = 'checkbox';
     check.name = tasksArr[i].index.toString();
     img.className = 'fa-solid fa-trash-can fa-xs';
@@ -28,20 +27,17 @@ const generateList = () => {
 };
 
 const appendList = (i) => {
-  // ul.innerHTML = "";
-  // for (let i = 0; i < tasksArr.length; i += 1) {
   const li = document.createElement('li');
+  li.className = 'todo-li-elements';
   const check = document.createElement('input');
   const lbl = document.createElement('label');
   img = document.createElement('i');
   check.type = 'checkbox';
-  // check.name = tasksArr[tasksArr.length].index.toString();
   img.className = 'fa-solid fa-trash-can fa-xs';
   ul.append(li);
   li.append(lbl, img);
   lbl.append(check);
   lbl.innerHTML += tasksArr[i - 1].description;
-  // }
 };
 
 window.addEventListener('load', () => {
@@ -52,35 +48,41 @@ window.addEventListener('load', () => {
 });
 
 const input = document.getElementById('new-item');
-// console.log(input);
 input.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && input.value) {
-    add(input.value, tasksArr);
+    addToArr(input.value, tasksArr);
     input.value = '';
     appendList(tasksArr.length);
-    // remove(0, tasksArr);
   }
 });
 
 const enterIcon = document.querySelector('.fa-arrow-turn-down');
 enterIcon.addEventListener('click', () => {
   if (input.value) {
-    add(input.value, tasksArr);
+    addToArr(input.value, tasksArr);
     input.value = '';
     appendList(tasksArr.length);
   }
 });
 
 const refreshIcon = document.querySelector('.fa-arrows-rotate');
-// console.log(refreshIcon);
 if (refreshIcon) {
   refreshIcon.addEventListener('click', () => {
-    // console.log("refresh");
+    generateList();
   });
 }
 
-img.addEventListener('click', () => {
-  // console.log(tasksArr);
-  // console.log(img.parentNode);
-  // remove(img.key, tasksArr);
+document.addEventListener('click', (e) => {
+  if (e.target.className === 'fa-solid fa-trash-can fa-xs') {
+    const delElementDOM = document.getElementsByClassName('todo-li-elements');
+    const delElementArr = e.target.parentNode;
+    let elementID;
+    for (let j = 0; j < delElementDOM.length; j += 1) {
+      if (delElementDOM[j] === delElementArr) {
+        elementID = j + 1;
+      }
+    }
+    e.target.parentNode.remove();
+    removeFromArr(elementID, tasksArr);
+  }
 });
