@@ -1,22 +1,6 @@
 import './style.css';
 
-const tasksArr = [
-  {
-    description: 'Go to swim!',
-    completed: true,
-    index: 44,
-  },
-  {
-    description: 'Yoga class tomorrow',
-    completed: false,
-    index: 0,
-  },
-  {
-    description: 'Finish homework',
-    completed: false,
-    index: 10,
-  },
-];
+const tasksArr = [];
 
 const ul = document.querySelector('.list-container');
 
