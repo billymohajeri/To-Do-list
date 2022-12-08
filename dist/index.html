@@ -9,7 +9,9 @@
   <body class="page">
     <section>
       <ul>
-        <li class="heading">Today's To Do</li>
+        <li class="heading">
+          Today's To Do<i class="fa-solid fa-arrows-rotate fa-2xs"></i>
+        </li>
         <li>
           <input
             type="text"
@@ -17,8 +19,11 @@
             id="new-item"
             placeholder="Add to your list..."
           />
+          <i class="fa-solid fa-arrow-turn-down fa-2xs"></i>
         </li>
-        <ul class="list-container"></ul>
+        <ul class="list-container">
+          <!-- This part generates dynamically -->
+        </ul>
         <li class="clear">Clear all completed</li>
       </ul>
     </section>

@@ -30,13 +30,15 @@ li {
   padding-bottom: 5%;
 }
 
-#new-item {
+#new-item,
+.text-box {
   background-color: rebeccapurple;
   color: #fff;
   border: none;
   font-style: italic;
   margin-bottom: 0.7em;
-  width: 100%;
+  width: 65%;
+  outline: none;
 }
 
 ::placeholder {
@@ -62,4 +64,33 @@ li {
   text-decoration: underline;
   color: #fff;
   cursor: pointer;
+}
+
+i {
+  cursor: pointer;
+  float: right;
+  color: rgb(133, 133, 133);
+}
+
+.fa-arrow-turn-down {
+  transform: rotate(90deg);
+  margin-top: 1.2em;
+  opacity: 50%;
+}
+
+.fa-trash-can,
+.fa-pen-to-square,
+.fa-arrows-rotate,
+.fa-floppy-disk {
+  margin-top: 1em;
+  margin-left: 5px;
+  opacity: 50%;
+}
+
+.fa-trash-can:hover,
+.fa-pen-to-square:hover,
+.fa-arrows-rotate:hover,
+.fa-arrow-turn-down:hover,
+.fa-floppy-disk:hover {
+  opacity: 100%;
 }
