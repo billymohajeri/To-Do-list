@@ -140,7 +140,8 @@ document.addEventListener('click', (e) => {
 
 const clearList = document.querySelector('.clear');
 clearList.addEventListener('click', () => {
-  tasksArr = [];
+  tasksArr = tasksArr.filter((arr) => !arr.completed);
+  // tasksArr = [];
   saveToLocal(tasksArr);
   generateList();
 });
