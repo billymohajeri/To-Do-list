@@ -1,6 +1,10 @@
 import './style.css';
 import {
-  addToArr, removeFromArr, saveToLocal, updateArr,
+  addToArr,
+  removeFromArr,
+  reorder,
+  saveToLocal,
+  updateArr,
 } from './crud.js';
 import updateCompleted from './update.js';
 
@@ -153,6 +157,7 @@ document.addEventListener('click', (e) => {
 const clearList = document.querySelector('.clear');
 clearList.addEventListener('click', () => {
   tasksArr = tasksArr.filter((arr) => !arr.completed);
+  reorder(tasksArr);
   saveToLocal(tasksArr);
   generateList();
 });
