@@ -94,3 +94,7 @@ i {
 .fa-floppy-disk:hover {
   opacity: 100%;
 }
+
+.checkbox:checked ~ .text-box {
+  text-decoration: line-through;
+}
