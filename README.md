@@ -24,8 +24,8 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-<!-- - [📺 Presentation](#presentation) -->
 - [📝 License](#license)
+<!-- - [📺 Presentation](#presentation) -->
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -43,6 +43,7 @@
     <li>HTML</li>
     <li>JavaScript</li>
     <li>CSS</li>
+    <li>Webpack</li>
     </ul>
 </details>
 
@@ -68,11 +69,35 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-To get a local copy up and running, follow these steps:
+To get a local copy up and running, follow these steps.
+
+### Setup
+
+Clone this repository to your desired folder:
 
 ```sh
-  git clone
+  cd my-folder
+  git clone git@github.com:billymohajeri/To-Do-list.git
 ```
+
+### Install
+
+Install the dependencies with:
+
+```sh
+  npm init -y
+  npm i
+```
+
+### Usage
+
+To run the project in local server, execute the following command:
+
+```sh
+  npm run start
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Prerequisites
 
