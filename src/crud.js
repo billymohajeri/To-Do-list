@@ -44,11 +44,7 @@ export const appendList = (i, arr) => {
 
 export const removeFromArr = (index, arr) => {
   arr.splice(index - 1, 1);
-  // reorder(arr);
+  reorder(arr);
 };
 
-export const updateArr = (index, newVal, arr) => {
-  arr[index - 1].description = newVal;
-  // saveToLocal(arr);
-  localStorage.setItem('myList', JSON.stringify(arr));
-};
+
