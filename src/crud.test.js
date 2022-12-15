@@ -1,30 +1,43 @@
-import { addToArr, removeFromArr } from './crud.js';
+/**
+ * @jest-environment jsdom
+ */
 
-const arr = [1];
+import { addToArr, removeFromArr, appendList } from './crud.js';
+
+const arr = [];
 
 describe('Test add to array function', () => {
   test('Adding a new element at 1', () => {
     addToArr('newTask1', arr);
-    expect(arr).toHaveLength(2);
+    expect(arr).toHaveLength(1);
   });
 
   test('Adding a new element at 2', () => {
     addToArr('newTask2', arr);
-    expect(arr).toHaveLength(3);
+    expect(arr).toHaveLength(2);
   });
 
   test('Adding a new element at 3', () => {
     addToArr('newTask3', arr);
-    expect(arr[3].index).toBe(4);
+    expect(arr[2].index).toBe(3);
   });
 
   test('Adding a new element at 4', () => {
     addToArr('New text', arr);
-    expect(arr[4].description).toBe('New text');
+    expect(arr[3].description).toBe('New text');
   });
   test('Adding a new element at 5', () => {
     addToArr('newTask5', arr);
-    expect(arr[3].completed).toBe(false);
+    expect(arr[4].completed).toBe(false);
+  });
+});
+
+describe('Test add to DOM function', () => {
+  test('Adding a li element to ul', () => {
+    document.body.innerHTML = "<ul class='list-container'></ul>";
+    appendList(1, arr);
+    const items = document.querySelectorAll('li');
+    expect(items).toHaveLength(1);
   });
 });
 
@@ -45,7 +58,7 @@ describe('Test Remove from array function', () => {
   });
   test('Removing the 2nd element', () => {
     removeFromArr(2, arr);
-    expect(arr[arr.length - 1]).toBe(1);
+    expect(arr[0].description).toBe('newTask1');
   });
   test('Removing the last element', () => {
     removeFromArr(1, arr);
