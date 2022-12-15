@@ -1,6 +1,7 @@
 import './style.css';
 import {
   addToArr,
+  appendList,
   removeFromArr,
   reorder,
   saveToLocal,
@@ -50,27 +51,7 @@ const generateList = () => {
   }
 };
 
-const appendList = (i) => {
-  const li = document.createElement('li');
-  li.className = 'todo-li-elements';
-  const check = document.createElement('input');
-  const txt = document.createElement('input');
-  txt.type = 'text';
-  txt.className = 'text-box';
-  txt.readOnly = true;
-  del = document.createElement('i');
-  edt = document.createElement('i');
-  sav = document.createElement('i');
-  check.type = 'checkbox';
-  check.className = 'checkbox';
-  del.className = 'fa-solid fa-trash-can fa-xs';
-  edt.className = 'fa-regular fa-pen-to-square fa-xs';
-  sav.className = 'fa-regular fa-floppy-disk fa-xs';
-  sav.style.display = 'none';
-  ul.append(li);
-  li.append(check, txt, del, edt, sav);
-  txt.value += tasksArr[i - 1].description;
-};
+//* ***************** */
 
 // EventListener for page load ==================
 window.addEventListener('load', () => {
@@ -83,8 +64,10 @@ const input = document.getElementById('new-item');
 input.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && input.value) {
     addToArr(input.value, tasksArr);
+    // ******************
+    // reorder(tasksArr);
     input.value = '';
-    appendList(tasksArr.length);
+    appendList(tasksArr.length, tasksArr);
   }
 });
 
@@ -92,8 +75,10 @@ const enterIcon = document.querySelector('.fa-arrow-turn-down');
 enterIcon.addEventListener('click', () => {
   if (input.value) {
     addToArr(input.value, tasksArr);
+    // ******************
+    // reorder(tasksArr);
     input.value = '';
-    appendList(tasksArr.length);
+    appendList(tasksArr.length, tasksArr);
   }
 });
 
@@ -136,6 +121,8 @@ document.addEventListener('click', (e) => {
     }
     e.target.parentNode.remove();
     removeFromArr(elementID, tasksArr);
+    // ******************
+    reorder(tasksArr);
   }
 
   // Edit button ==================

@@ -18,12 +18,37 @@ export const addToArr = (val, arr) => {
   reorder(arr);
 };
 
+export const appendList = (i, arr) => {
+  const ul = document.querySelector('.list-container');
+
+  const li = document.createElement('li');
+  li.className = 'todo-li-elements';
+  const check = document.createElement('input');
+  const txt = document.createElement('input');
+  txt.type = 'text';
+  txt.className = 'text-box';
+  txt.readOnly = true;
+  const del = document.createElement('i');
+  const edt = document.createElement('i');
+  const sav = document.createElement('i');
+  check.type = 'checkbox';
+  check.className = 'checkbox';
+  del.className = 'fa-solid fa-trash-can fa-xs';
+  edt.className = 'fa-regular fa-pen-to-square fa-xs';
+  sav.className = 'fa-regular fa-floppy-disk fa-xs';
+  sav.style.display = 'none';
+  ul.append(li);
+  li.append(check, txt, del, edt, sav);
+  txt.value += arr[i - 1].description;
+};
+
 export const removeFromArr = (index, arr) => {
   arr.splice(index - 1, 1);
-  reorder(arr);
+  // reorder(arr);
 };
 
 export const updateArr = (index, newVal, arr) => {
   arr[index - 1].description = newVal;
-  saveToLocal(arr);
+  // saveToLocal(arr);
+  localStorage.setItem('myList', JSON.stringify(arr));
 };
