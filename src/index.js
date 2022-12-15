@@ -84,7 +84,7 @@ input.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && input.value) {
     addToArr(input.value, tasksArr);
     // ******************
-    reorder(tasksArr)
+    reorder(tasksArr);
     input.value = '';
     appendList(tasksArr.length);
   }
@@ -95,7 +95,7 @@ enterIcon.addEventListener('click', () => {
   if (input.value) {
     addToArr(input.value, tasksArr);
     // ******************
-    reorder(tasksArr)
+    reorder(tasksArr);
     input.value = '';
     appendList(tasksArr.length);
   }
@@ -141,7 +141,7 @@ document.addEventListener('click', (e) => {
     e.target.parentNode.remove();
     removeFromArr(elementID, tasksArr);
     // ******************
-    reorder(tasksArr)
+    reorder(tasksArr);
   }
 
   // Edit button ==================

@@ -1,6 +1,6 @@
-import { addToArr, removeFromArr } from './crud';
+import { addToArr, removeFromArr } from './crud.js';
+
 const arr = [1];
-const myObj = {};
 
 describe('Test add to array function', () => {
   test('Adding a new element at 1', () => {
@@ -34,7 +34,7 @@ describe('Test Remove from array function', () => {
     expect(arr).toHaveLength(5);
   });
   test('Removing the 3 elements', () => {
-    for (let index = 2; index <= 4; index++) {
+    for (let index = 2; index <= 4; index += 1) {
       removeFromArr(index, arr);
     }
     expect(arr).toHaveLength(3);
