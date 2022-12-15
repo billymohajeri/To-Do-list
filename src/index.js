@@ -83,6 +83,8 @@ const input = document.getElementById('new-item');
 input.addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && input.value) {
     addToArr(input.value, tasksArr);
+    // ******************
+    reorder(tasksArr)
     input.value = '';
     appendList(tasksArr.length);
   }
@@ -92,6 +94,8 @@ const enterIcon = document.querySelector('.fa-arrow-turn-down');
 enterIcon.addEventListener('click', () => {
   if (input.value) {
     addToArr(input.value, tasksArr);
+    // ******************
+    reorder(tasksArr)
     input.value = '';
     appendList(tasksArr.length);
   }
@@ -136,6 +140,8 @@ document.addEventListener('click', (e) => {
     }
     e.target.parentNode.remove();
     removeFromArr(elementID, tasksArr);
+    // ******************
+    reorder(tasksArr)
   }
 
   // Edit button ==================
