@@ -20,7 +20,6 @@ export const addToArr = (val, arr) => {
 
 export const appendList = (i, arr) => {
   const ul = document.querySelector('.list-container');
-
   const li = document.createElement('li');
   li.className = 'todo-li-elements';
   const check = document.createElement('input');

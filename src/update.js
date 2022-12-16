@@ -11,21 +11,7 @@ export const updateArr = (index, newVal, arr) => {
 };
 
 export const clearCompleted = (arr) => {
-  // for (let i = 0; i < arr.length; i += 1) {
-  //   if (arr[i].completed) {
-  //     arr.splice(i , 1);
-  //   }
-  // }
-  let temp=[]
-  for (let i = 0; i < arr.length; i += 1) {
-    if (!arr[i].completed) {
-      // arr.splice(i , 1);
-      temp.push(arr[i])
-    }
-  }
-  console.log('temp:',temp);
-  arr=temp
-  console.log('arr:',arr);
+  arr = arr.filter((tasksArr) => !tasksArr.completed);
   reorder(arr);
+  return arr;
 };
-
