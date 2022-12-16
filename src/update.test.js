@@ -2,18 +2,17 @@
  * @jest-environment jsdom
  */
 
-import { clearCompleted, updateArr, updateCompleted } from './update.js';
+import { clearCompleted, updateArr, updateCompleted } from "./update.js";
 
-
-
-describe('Test clear completed function', () => {
-  test('Clearing completed', () => {
+describe("Test clear completed function", () => {
+  test("Clearing completed", () => {
     const arr = [
-      { description: 'Default', completed: true, index: 1 },
-      { description: 'two', completed: false, index: 2 },
-      { description: 'three', completed: false, index: 3 },
-      { description: 'four', completed: false, index: 4 },
-      { description: 'five', completed: false, index: 5 },
+      { description: "Default", completed: true, index: 1 },
+      { description: "two", completed: false, index: 2 },
+      { description: "three", completed: false, index: 3 },
+      { description: "four", completed: false, index: 4 },
+      { description: "five", completed: false, index: 5 },
+      { description: "six", completed: false, index: 6 },
     ];
     // expect(arr[1].completed).toBe(true);
     clearCompleted(arr);
@@ -56,4 +55,3 @@ describe('Test clear completed function', () => {
 //     expect(arr[0].completed).not.toBeFalsy();
 //   });
 // });
-
