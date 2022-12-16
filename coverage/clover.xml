@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1671149406734" clover="3.2.0">
-  <project timestamp="1671149406734" name="All files">
-    <metrics statements="44" coveredstatements="44" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="8" elements="54" coveredelements="54" complexity="0" loc="44" ncloc="44" packages="1" files="2" classes="2"/>
+<coverage generated="1671175634266" clover="3.2.0">
+  <project timestamp="1671175634266" name="All files">
+    <metrics statements="48" coveredstatements="44" conditionals="2" coveredconditionals="2" methods="8" coveredmethods="6" elements="58" coveredelements="52" complexity="0" loc="48" ncloc="48" packages="1" files="2" classes="2"/>
     <file name="crud.js" path="D:\0 Microverse\2022-12-06-To Do list\To-Do-list\src\crud.js">
       <metrics statements="33" coveredstatements="33" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
       <line num="1" count="2" type="stmt"/>
-      <line num="2" count="18" type="stmt"/>
+      <line num="2" count="13" type="stmt"/>
       <line num="5" count="2" type="stmt"/>
       <line num="6" count="13" type="stmt"/>
-      <line num="7" count="36" type="stmt"/>
+      <line num="7" count="37" type="stmt"/>
       <line num="9" count="13" type="stmt"/>
       <line num="12" count="2" type="stmt"/>
       <line num="13" count="5" type="stmt"/>
@@ -39,18 +39,22 @@
       <line num="47" count="7" type="stmt"/>
     </file>
     <file name="update.js" path="D:\0 Microverse\2022-12-06-To Do list\To-Do-list\src\update.js">
-      <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <metrics statements="15" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="1"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="4" count="3" type="stmt"/>
-      <line num="5" count="3" type="stmt"/>
+      <line num="4" count="0" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
       <line num="8" count="1" type="stmt"/>
-      <line num="9" count="2" type="stmt"/>
-      <line num="10" count="2" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
       <line num="13" count="1" type="stmt"/>
-      <line num="14" count="1" type="stmt"/>
-      <line num="15" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="16" count="2" type="stmt"/>
       <line num="19" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="21" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="23" count="4" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
