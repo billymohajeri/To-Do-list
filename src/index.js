@@ -1,13 +1,8 @@
 import './style.css';
 import {
-  addToArr,
-  appendList,
-  removeFromArr,
-  reorder,
-  saveToLocal,
-  updateArr,
+  addToArr, appendList, removeFromArr, reorder,
 } from './crud.js';
-import updateCompleted from './update.js';
+import { updateCompleted, updateArr, clearCompleted } from './update.js';
 
 let tasksArr = [];
 if (localStorage.getItem('myList') === 'undefined') {
@@ -24,6 +19,9 @@ let sav = document.createElement('i');
 const ul = document.querySelector('.list-container');
 
 const generateList = () => {
+  if (localStorage.getItem('myList')) {
+    tasksArr = JSON.parse(localStorage.getItem('myList'));
+  }
   ul.innerHTML = '';
   if (tasksArr) {
     for (let i = 0; i < tasksArr.length; i += 1) {
@@ -143,9 +141,7 @@ document.addEventListener('click', (e) => {
 // Clear completed ==================
 const clearList = document.querySelector('.clear');
 clearList.addEventListener('click', () => {
-  tasksArr = tasksArr.filter((arr) => !arr.completed);
-  reorder(tasksArr);
-  saveToLocal(tasksArr);
+  clearCompleted(tasksArr);
   generateList();
 });
 

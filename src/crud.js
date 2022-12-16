@@ -46,5 +46,3 @@ export const removeFromArr = (index, arr) => {
   arr.splice(index - 1, 1);
   reorder(arr);
 };
-
-
