@@ -2,66 +2,71 @@
  * @jest-environment jsdom
  */
 
-import { updateArr } from './crud.js';
+import { clearCompleted, updateArr, updateCompleted } from './update.js';
 
-const arr = [];
-
-describe('Test add to array function', () => {
-  test('Adding a new element at 1', () => {
-    addToArr('newTask1', arr);
-    expect(arr).toHaveLength(1);
-  });
-
-  test('Adding a new element at 2', () => {
-    addToArr('newTask2', arr);
-    expect(arr).toHaveLength(2);
-  });
-
-  test('Adding a new element at 3', () => {
-    addToArr('newTask3', arr);
-    expect(arr[2].index).toBe(3);
-  });
-
-  test('Adding a new element at 4', () => {
-    addToArr('New text', arr);
-    expect(arr[3].description).toBe('New text');
-  });
-  test('Adding a new element at 5', () => {
-    addToArr('newTask5', arr);
-    expect(arr[4].completed).toBe(false);
+describe('Test clear completed function', () => {
+  test('Clearing completed', () => {
+    let testArr = [
+      { description: 'Default', completed: true, index: 1 },
+      { description: 'two', completed: false, index: 2 },
+      { description: 'three', completed: true, index: 3 },
+      { description: 'four', completed: false, index: 4 },
+      { description: 'five', completed: true, index: 5 },
+      { description: 'six', completed: false, index: 6 },
+    ];
+    testArr = clearCompleted(testArr);
+    expect(testArr.length).toBe(3);
+    expect(testArr).toHaveLength(3);
+    expect(testArr[0].completed).toBe(false);
+    expect(testArr[1].completed).toBe(false);
+    expect(testArr[2].completed).toBe(false);
+    expect(testArr[3]).toBeUndefined();
   });
 });
 
-describe('Test add to DOM function', () => {
-  test('Adding a li element to ul', () => {
-    document.body.innerHTML = "<ul class='list-container'></ul>";
-    appendList(1, arr);
-    const items = document.querySelectorAll('li');
-    expect(items).toHaveLength(1);
+describe('Test edit the update description array function', () => {
+  const arr = [
+    { description: 'Default', completed: true, index: 1 },
+    { description: 'two', completed: false, index: 2 },
+    { description: 'three', completed: true, index: 3 },
+    { description: 'four', completed: false, index: 4 },
+    { description: 'five', completed: true, index: 5 },
+    { description: 'six', completed: false, index: 6 },
+  ];
+  test("Eiting the first element's description", () => {
+    expect(arr[0].description).toEqual('Default');
+    updateArr(1, 'EDITED TASK', arr);
+    expect(arr[0].description).toEqual('EDITED TASK');
+  });
+  test('Eiting again', () => {
+    expect(arr[0].description).toEqual('EDITED TASK');
+    updateArr(1, 'Default-2', arr);
+    expect(arr[0].description).toEqual('Default-2');
   });
 });
 
-describe('Test Remove from array function', () => {
-  test('Removing the 6th element', () => {
-    removeFromArr(6, arr);
-    expect(arr).toHaveLength(5);
+describe('Test edit the update completed array function', () => {
+  const arr = [
+    { description: 'Default', completed: true, index: 1 },
+    { description: 'two', completed: false, index: 2 },
+    { description: 'three', completed: true, index: 3 },
+    { description: 'four', completed: false, index: 4 },
+    { description: 'five', completed: true, index: 5 },
+    { description: 'six', completed: false, index: 6 },
+  ];
+  test("Eiting the first element's status", () => {
+    expect(arr[1].completed).toEqual(false);
+    updateCompleted(2, arr, true);
+    expect(arr[1].completed).toEqual(true);
   });
-  test('Removing the 3 elements', () => {
-    for (let index = 2; index <= 4; index += 1) {
-      removeFromArr(index, arr);
-    }
-    expect(arr).toHaveLength(3);
+  test('Eiting again', () => {
+    expect(arr[0].completed).toBeTruthy();
+    updateCompleted(1, arr, false);
+    expect(arr[0].completed).toBeFalsy();
   });
-  test('Removing the 3rd element', () => {
-    removeFromArr(3, arr);
-    expect(arr).toHaveLength(2);
-  });
-  test('Removing the 2nd element', () => {
-    removeFromArr(2, arr);
-    expect(arr[0].description).toBe('newTask1');
-  });
-  test('Removing the last element', () => {
-    removeFromArr(1, arr);
-    expect(arr.length).toBe(0);
+  test('Eiting again', () => {
+    expect(arr[0].completed).toBe(false);
+    updateCompleted(1, arr, true);
+    expect(arr[0].completed).not.toBeFalsy();
   });
 });

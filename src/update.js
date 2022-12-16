@@ -1,6 +1,6 @@
-import { saveToLocal } from './crud.js';
+import { saveToLocal, reorder } from './crud.js';
 
-const updateCompleted = (index, arr, status) => {
+export const updateCompleted = (index, arr, status) => {
   arr[index - 1].completed = status;
   saveToLocal(arr);
 };
@@ -8,7 +8,10 @@ const updateCompleted = (index, arr, status) => {
 export const updateArr = (index, newVal, arr) => {
   arr[index - 1].description = newVal;
   saveToLocal(arr);
-  // localStorage.setItem('myList', JSON.stringify(arr));
 };
 
-export default updateCompleted;
+export const clearCompleted = (arr) => {
+  arr = arr.filter((tasksArr) => !tasksArr.completed);
+  reorder(arr);
+  return arr;
+};
