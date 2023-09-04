@@ -1,9 +1,5 @@
 <a name="readme-top"></a>
 
-<div align="center">
-  <h3><b>To Do list</b></h3>
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
