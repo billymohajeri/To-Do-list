@@ -118,9 +118,6 @@ Example commands:
 ```
 --->
 
-<!-- ### Install -->
-
-<!-- Install this project with: -->
 
 <!--
 Example command:
