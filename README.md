@@ -16,7 +16,6 @@
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
-<!-- - [📺 Presentation](#presentation) -->
 
 <!-- PROJECT DESCRIPTION -->
 
