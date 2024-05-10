@@ -15,8 +15,6 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
-
 # 📖 To Do list <a name="about-project"></a>
 
 **To Do list** In this project, I build a simple HTML list of To Do tasks. This simple web page will be built using webpack and served by a webpack dev server.
