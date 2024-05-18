@@ -80,8 +80,6 @@ In order to run this project you need:
 - Code Editor: VS Code
 - Web Browser
 
-<!-- ### Setup -->
-
 <!-- Clone this repository to your desired folder: -->
 
 <!--
