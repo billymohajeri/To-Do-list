@@ -81,16 +81,6 @@ In order to run this project you need:
 - Web Browser
 
 <!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
-
-
-<!--
 Example command:
 
 ```sh
