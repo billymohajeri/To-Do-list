@@ -80,10 +80,6 @@ In order to run this project you need:
 - Code Editor: VS Code
 - Web Browser
 
-<!-- ### Run tests
-
-To run tests, run the following command: -->
-
 <!--
 Example command:
 
