@@ -80,10 +80,6 @@ In order to run this project you need:
 - Code Editor: VS Code
 - Web Browser
 
-<!-- ### Deployment
-
-You can deploy this project using: -->
-
 <!--
 Example:
 
