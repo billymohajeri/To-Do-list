@@ -65,7 +65,7 @@ Install the dependencies with:
 
 ### Usage
 
-To run the project in local server, execute the following command:
+To run the project on a local server, execute the following command:
 
 ```sh
   npm run start
@@ -81,8 +81,6 @@ In order to run this project you need:
 - Web Browser
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
