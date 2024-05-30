@@ -80,8 +80,6 @@ In order to run this project you need:
 - Code Editor: VS Code
 - Web Browser
 
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
 ## 👥 Authors <a name="authors"></a>
 
 <!-- > Mention all of the collaborators of this project. -->
