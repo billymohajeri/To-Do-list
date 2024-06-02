@@ -90,11 +90,9 @@ In order to run this project you need:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
-
 <!-- ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add a dynamic button for mobile version**
+- **Add a dynamic button for the mobile version**
 - **Add form for reserve tickets** -->
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
