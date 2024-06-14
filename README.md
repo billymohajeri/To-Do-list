@@ -126,10 +126,6 @@ I would like to thank all of my code reviewers for giving me constructive feedba
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
-<!-- ## 📺 Presentation <a name="presentation"></a>
-
-[Presentation about this project](https://www.loom.com/share/506c91dd53a44229a9c31ec8c3f6a828) -->
-
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE/MIT.md) licensed.
