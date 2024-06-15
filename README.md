@@ -110,8 +110,6 @@ I would like to thank all of my code reviewers for giving me constructive feedba
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
 <!-- ## ❓ FAQ <a name="faq"></a>
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
