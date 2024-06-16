@@ -122,8 +122,6 @@ I would like to thank all of my code reviewers for giving me constructive feedba
 
   - [Answer_2] -->
 
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
-
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE/MIT.md) licensed.
